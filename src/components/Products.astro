@@ -1,0 +1,107 @@
+---
+import Card from "./Card.astro";
+import almendras from "../assets/Almendras.webp"
+import castanas_de_caju from "../assets/Castanas_de_Caju.webp"
+import mix_cervecero from "../assets/Mix_Cervecero.webp"
+import mix_clasico from "../assets/Mix_Clasico.webp"
+import mix_premium from "../assets/Mix_Premium.webp"
+import mix_tropical from "../assets/Mix_Tropical.webp"
+import nuez_mariposa from "../assets/Nuez_Mariposa.webp"
+import pasas_de_uva from "../assets/Pasas_de_uva_negras_sin_semilla.webp"
+
+const PROJECTS = [
+	{
+		title: "Mix Tropical 5 kg",
+		description:
+			"Perfecto para recargar energías, contiene almendras, ananá deshidratado, banana deshidratada, maní, nueces, pasas de uva negras y castañas de cajú.",
+		image: mix_tropical,
+    price: "$46.000"
+	},
+	{
+		title: "Mix Tropical 10 kg",
+		description:
+			"Perfecto para recargar energías, contiene almendras, ananá deshidratado, banana deshidratada, maní, nueces, pasas de uva negras y castañas de cajú.",
+		image: mix_tropical,
+    price: "$92.000"
+	},
+	{
+		title: "Mix Clasico 5 kg",
+		description:
+			"Una combinación tradicional que incluye almendras, nueces, pasas de uva negras, maní sin sal y semillas de girasol.",
+		image: mix_clasico,
+    price: "$43.000"
+	},
+	{
+		title: "Mix Clasico 10 kg",
+		description:
+			"Una combinación tradicional que incluye almendras, nueces, pasas de uva negras, maní sin sal y semillas de girasol.",
+		image: mix_clasico,
+    price: "$86.000"
+	},
+	{
+		title: "Mix Cervecero 5 kg",
+		description:
+			"Ideal para compartir con amigos, incluye maní saborizado, maíz frito, semillas de zapallo, maní salado y semillas de girasol.",
+		image: mix_cervecero,
+    price: "$49.000"
+	},
+	{
+		title: "Mix Cervecero 10 kg",
+		description:
+			"Ideal para compartir con amigos, incluye maní saborizado, maíz frito, semillas de zapallo, maní salado y semillas de girasol.",
+		image: mix_cervecero,
+    price: "$98.000"
+	},
+	{
+		title: "Mix Premium 5 kg",
+		description:
+			"Una selección exclusiva de nueces, almendras, castañas de cajú y maní.",
+		image: mix_premium,
+    price: "$59.900"
+	},
+	{
+		title: "Mix Premium 10 kg",
+		description:
+			"Una selección exclusiva de nueces, almendras, castañas de cajú y maní.",
+		image: mix_premium,
+    price: "$120.000"
+	},
+	{
+		title: "Nuez Mariposa Cobriza 5 kg",
+		description:
+			"Nuez Mariposa Cobriza.",
+		image: nuez_mariposa,
+    price: "$125.000"
+	},
+	{
+		title: "Castañas de Cajú 5 kg",
+		description:
+			"Castañas de Cajú.",
+		image: castanas_de_caju,
+    price: "$99.000"
+	},
+	{
+		title: "Pasas de Uva Negra 5 Kg",
+		description:
+			"Pasas de Uva Negra sin semilla.",
+		image: pasas_de_uva,
+    price: "$25.000"
+	},
+	{
+		title: "Almendras 5 Kg",
+		description:
+			"Almendras.",
+		image: almendras,
+    price: "$89.000"
+	},
+];
+---
+
+<div class="min-h-screen m-3 p-3 rounded-lg overflow-hidden border border-gray-300">
+	<h2 class="my-4 text-orange_1 text-3xl font-semibold">
+		Nuestros productos:
+	</h2>
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+		{PROJECTS.map((project) => <Card {...project} />)}
+	</div>
+</div>

@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+	image: ImageMetadata;
+	title: string;
+	description: string;
+  price: string;
+}
+
+const { image, title, description, price } = Astro.props;
+---
+
+<article class="rounded-lg overflow-hidden border border-gray-300 shadow-sm shadow-gray-400/50">
+	<Image
+		alt={`Imagen de ${title}`}
+		class="object-cover w-96"
+		loading="lazy"
+		src={image}
+	/>
+
+  <h3 class="px-3 py-2 text-base font-bold text-gray-800">
+    {title}
+  </h3>
+
+  <p class="px-3 text-gray-700">{description}</p>
+
+  <p class="px-3 py-2 text-gray-700">{price}</p>
+</article>
